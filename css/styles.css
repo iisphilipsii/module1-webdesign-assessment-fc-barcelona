@@ -335,3 +335,19 @@ ul, ol { margin: 0 0 1rem; }
   color: #c3c8dd;
   margin-top: 0.4rem;
 }
+/* Motto band */
+.motto {
+  text-align: center;
+  background: var(--grana);
+  color: var(--white);
+  position: relative;
+}
+.motto-quote {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 7vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0 0 0.3rem;
+}
+.motto-sub { color: rgba(255, 255, 255, 0.85); margin: 0; letter-spacing: 0.02em; }
