@@ -171,3 +171,28 @@ ul, ol { margin: 0 0 1rem; }
   color: var(--grana);
   text-transform: none;
 }
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--ff-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.nav-link:hover { background: var(--mist); color: var(--grana); }
+.nav-link[aria-current="page"] {
+  color: var(--white);
+  background: var(--blau);
+}
