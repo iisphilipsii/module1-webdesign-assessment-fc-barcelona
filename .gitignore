@@ -1,0 +1,7 @@
+gitignore
+# macOS
+.DS_Store
+
+# editors and tooling
+.vscode/
+.ruff_cache/

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" role="img" aria-label="Stylised stadium">
+  <defs>
+    <linearGradient id="st-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#004D98"/>
+      <stop offset="1" stop-color="#5c0027"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="130" fill="url(#st-sky)"/>
+  <!-- stand roof -->
+  <path d="M12 70 C60 34 180 34 228 70 L228 84 C180 50 60 50 12 84 Z" fill="#0b1024"/>
+  <!-- tiers -->
+  <ellipse cx="120" cy="104" rx="120" ry="40" fill="#111a38"/>
+  <ellipse cx="120" cy="100" rx="92" ry="30" fill="#182346"/>
+  <!-- pitch -->
+  <ellipse cx="120" cy="100" rx="62" ry="19" fill="#13743f"/>
+  <ellipse cx="120" cy="100" rx="62" ry="19" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+  <line x1="120" y1="81" x2="120" y2="119" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+  <circle cx="120" cy="100" r="8" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4"/>
+  <!-- floodlights -->
+  <g fill="#EDBB00">
+    <circle cx="30" cy="40" r="3"/>
+    <circle cx="210" cy="40" r="3"/>
+    <circle cx="90" cy="30" r="2.4"/>
+    <circle cx="150" cy="30" r="2.4"/>
+  </g>
+</svg>

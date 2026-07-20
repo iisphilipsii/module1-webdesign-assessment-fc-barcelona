@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a floodlit football stadium in Barcelona blue and garnet">
+  <defs>
+    <linearGradient id="hero-sky" x1="0" y1="0" x2="0.75" y2="1">
+      <stop offset="0" stop-color="#003b76"/>
+      <stop offset="0.55" stop-color="#004D98"/>
+      <stop offset="1" stop-color="#7a0034"/>
+    </linearGradient>
+    <linearGradient id="hero-beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EDBB00" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#EDBB00" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="hero-glow" cx="0.5" cy="0.18" r="0.85">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <polygon id="hero-star" points="0,-13 3.19,-4.39 12.4,-4.02 5.15,1.68 7.65,10.5 0,5.4 -7.65,10.5 -5.15,1.68 -12.4,-4.02 -3.19,-4.39" fill="#EDBB00"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#hero-sky)"/>
+  <rect width="800" height="600" fill="url(#hero-glow)"/>
+
+  <!-- subtle jersey stripes -->
+  <g fill="#A50044" opacity="0.15">
+    <rect x="60" y="0" width="28" height="440"/>
+    <rect x="160" y="0" width="28" height="440"/>
+    <rect x="260" y="0" width="28" height="440"/>
+    <rect x="360" y="0" width="28" height="440"/>
+    <rect x="460" y="0" width="28" height="440"/>
+    <rect x="560" y="0" width="28" height="440"/>
+    <rect x="660" y="0" width="28" height="440"/>
+  </g>
+
+  <!-- champions stars -->
+  <use href="#hero-star" transform="translate(320 70) scale(0.9)"/>
+  <use href="#hero-star" transform="translate(370 55)"/>
+  <use href="#hero-star" transform="translate(430 52)"/>
+  <use href="#hero-star" transform="translate(490 60)"/>
+  <use href="#hero-star" transform="translate(540 78) scale(0.9)"/>
+
+  <!-- floodlight beams -->
+  <polygon points="150,70 190,70 270,440 70,440" fill="url(#hero-beam)"/>
+  <polygon points="650,70 610,70 530,440 730,440" fill="url(#hero-beam)"/>
+
+  <!-- stadium bowl -->
+  <ellipse cx="400" cy="580" rx="440" ry="165" fill="#0b1024"/>
+  <ellipse cx="400" cy="560" rx="335" ry="120" fill="#111a38"/>
+  <ellipse cx="400" cy="558" rx="215" ry="72" fill="#13743f"/>
+  <ellipse cx="400" cy="558" rx="215" ry="72" fill="none" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2"/>
+  <line x1="400" y1="486" x2="400" y2="630" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2"/>
+  <circle cx="400" cy="558" r="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2"/>
+
+  <!-- floodlight pylons -->
+  <g fill="#0b1024">
+    <rect x="150" y="360" width="6" height="90"/>
+    <rect x="128" y="352" width="50" height="14" rx="3"/>
+    <rect x="644" y="360" width="6" height="90"/>
+    <rect x="622" y="352" width="50" height="14" rx="3"/>
+  </g>
+</svg>
