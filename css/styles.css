@@ -351,3 +351,44 @@ ul, ol { margin: 0 0 1rem; }
   margin: 0 0 0.3rem;
 }
 .motto-sub { color: rgba(255, 255, 255, 0.85); margin: 0; letter-spacing: 0.02em; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: #b9bdd4; }
+.site-footer a { color: #dfe3f3; }
+.site-footer a:hover { color: var(--or); }
+.footer-grid { display: grid; gap: 2rem; padding-block: clamp(2.5rem, 7vw, 3.5rem); }
+.footer-brand { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.9rem; }
+.footer-brand img { width: 40px; }
+.footer-brand span {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+.footer h2 {
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  margin-bottom: 0.9rem;
+}
+.footer ul { list-style: none; margin: 0; padding: 0; }
+.footer li { margin-bottom: 0.5rem; }
+.footer-contact a { font-weight: 600; }
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-block: 1.1rem;
+  font-size: 0.85rem;
+  color: #8a8fac;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  justify-content: space-between;
+}
+.footer-disclaimer {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #9297b4;
+}
