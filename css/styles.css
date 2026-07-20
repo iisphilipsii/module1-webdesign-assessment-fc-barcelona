@@ -1,0 +1,127 @@
+/* Stylesheet for the website
+   Mobile first, no JavaScript and no CSS framework. 
+   The layout is done with CSS Grid and Flexbox.
+   Colours are the club's blue and garnet (blaugrana) with a gold accent.
+   Headings use Barlow Condensed and text uses Barlow. */
+
+/* Variables */
+:root {
+  --blau: #004D98;
+  --blau-dark: #003b76;
+  --grana: #A50044;
+  --grana-dark: #7a0034;
+  --or: #EDBB00;          /* gold accent only, too low contrast for text on white */
+  --or-deep: #b8880a;
+  --ink: #14152A;         /* nearly black with a blue tint, main text colour */
+  --ink-soft: #4a4c66;
+  --mist: #F2F4F8;        /* light grey-blue section background */
+  --line: #e1e6ef;
+  --white: #ffffff;
+
+  /* the browser uses the first font it can find, so if Barlow isn't
+     installed it drops to the next one - none of these are downloaded */
+  --ff-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --ff-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow-sm: 0 4px 14px rgba(20, 21, 42, 0.08);
+  --shadow: 0 14px 40px rgba(20, 21, 42, 0.12);
+  --ring: 0 0 0 3px rgba(0, 77, 152, 0.35);
+
+  --wrap: 1140px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+
+/* Base / reset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;   /* stops iOS resizing the text by itself */
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;               /* stops any accidental sideways scroll on phones */
+  font-family: var(--ff-body);
+  font-size: 1.0625rem;             /* about 17px, easy to read on a phone */
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg { max-width: 100%; height: auto; display: block; }  /* images shrink to fit their box */
+
+a { color: var(--blau); text-underline-offset: 0.15em; }
+a:hover { color: var(--grana); }
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  line-height: 1.04;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+}
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem; }
+
+:focus-visible {
+  outline: 3px solid var(--blau);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Helpers */
+.container,
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+  color: var(--grana);
+  margin: 0 0 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 28px; height: 3px;
+  background: var(--or);
+  flex: none;
+}
+.eyebrow--light { color: var(--or); }
+
+.section { padding-block: clamp(2.75rem, 8vw, 5.25rem); }
+.section--mist { background: var(--mist); }
+.section--ink { background: var(--ink); color: #dfe2f0; }
+.section--ink h1,
+.section--ink h2,
+.section--ink h3 { color: var(--white); }
+
+.section-title {
+  font-size: clamp(1.9rem, 7vw, 3rem);
+  margin-bottom: 0.35em;
+}
+.lead {
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.section--ink .lead { color: #c3c8dd; }
