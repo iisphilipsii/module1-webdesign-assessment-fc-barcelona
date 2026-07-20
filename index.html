@@ -18,7 +18,14 @@
         </span>
       </a>
 
-      <nav class="mainnav">
+      <!-- hidden checkbox keeps track of whether the menu is open, so the burger menu works without any JavaScript -->
+      <input class="nav-checkbox" type="checkbox" id="nav-toggle" aria-label="Toggle main menu">
+      <label class="nav-burger" for="nav-toggle">
+        <span class="nav-burger-box" aria-hidden="true"></span>
+        <span>Menu</span>
+      </label>
+
+      <nav class="mainnav" aria-label="Primary">
         <ul class="nav-menu">
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="history.html">History</a></li>

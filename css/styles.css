@@ -171,13 +171,68 @@ ul, ol { margin: 0 0 1rem; }
   color: var(--grana);
   text-transform: none;
 }
+/* responsive nav done with the checkbox trick so no JavaScript is needed */
+.mainnav { width: 100%; order: 3; }
+.nav-checkbox {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  width: 1px; height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+.nav-burger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.9rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  color: var(--blau);
+  cursor: pointer;
+  user-select: none;
+}
+.nav-burger-box {
+  position: relative;
+  width: 22px; height: 2px;
+  background: var(--blau);
+  transition: background 0.2s ease;
+}
+.nav-burger-box::before,
+.nav-burger-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px; height: 2px;
+  background: var(--blau);
+  transition: transform 0.2s ease;
+}
+.nav-burger-box::before { top: -7px; }
+.nav-burger-box::after { top: 7px; }
+
 .nav-menu {
   list-style: none;
-  display: flex;
-  gap: 0.3rem;
-  margin: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  margin: 0.6rem 0 0.2rem;
   padding: 0;
 }
+
+/* when the checkbox is ticked the menu shows */
+.nav-checkbox:checked ~ .mainnav .nav-menu { display: flex; }
+/* turn the burger icon into an X when the menu is open */
+.nav-checkbox:checked ~ .nav-burger .nav-burger-box { background: transparent; }
+.nav-checkbox:checked ~ .nav-burger .nav-burger-box::before { transform: translateY(7px) rotate(45deg); }
+.nav-checkbox:checked ~ .nav-burger .nav-burger-box::after { transform: translateY(-7px) rotate(-45deg); }
+/* focus ring for keyboard users */
+.nav-checkbox:focus-visible ~ .nav-burger { outline: 3px solid var(--blau); outline-offset: 2px; }
+
 .nav-link {
   display: block;
   padding: 0.7rem 0.9rem;
