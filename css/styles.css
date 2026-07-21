@@ -455,3 +455,9 @@ ul, ol { margin: 0 0 1rem; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
 }
+
+/* 768px and up: hero becomes two columns */
+@media (min-width: 768px) {
+  .hero-inner { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
+  .stat-row { grid-template-columns: repeat(4, 1fr); }
+}
