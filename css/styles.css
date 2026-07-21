@@ -485,7 +485,8 @@ ul, ol { margin: 0 0 1rem; }
   padding-left: 0.9rem;
 }
 
-/* Responsive breakpoints (mobile first)   */
+/* Responsive breakpoints (mobile first) */
+
 /* 600px and up: cards go two across */
 @media (min-width: 600px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
