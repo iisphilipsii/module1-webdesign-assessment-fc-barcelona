@@ -448,8 +448,44 @@ ul, ol { margin: 0 0 1rem; }
   color: #9297b4;
 }
 
-/* Responsive breakpoints (mobile first)   */
+/* Timeline (history page) */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; top: 4px; bottom: 4px;
+  width: 3px;
+  background: linear-gradient(var(--blau), var(--grana));
+}
+.timeline li { position: relative; padding: 0 0 1.75rem 2.5rem; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: 4px;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--or);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--or);
+}
+.timeline .year {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--grana);
+  line-height: 1;
+}
+.timeline h3 { margin: 0.15rem 0 0.35rem; font-size: 1.25rem; }
+.timeline p { color: var(--ink-soft); margin: 0; }
 
+.media-note {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--or);
+  padding-left: 0.9rem;
+}
+
+/* Responsive breakpoints (mobile first)   */
 /* 600px and up: cards go two across */
 @media (min-width: 600px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
@@ -466,6 +502,7 @@ ul, ol { margin: 0 0 1rem; }
 @media (min-width: 992px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
   .split--7-5 { grid-template-columns: 7fr 5fr; }
+    .split--8-4 { grid-template-columns: 8fr 4fr; }
   .masthead-inner { flex-wrap: nowrap; }
   .nav-burger,
   .nav-checkbox { display: none; }
