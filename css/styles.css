@@ -461,3 +461,22 @@ ul, ol { margin: 0 0 1rem; }
   .hero-inner { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
   .stat-row { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* 992px and up: full nav bar across the top; burger hidden on desktop wide view; burger menu shows when window is narrowed*/
+@media (min-width: 992px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .split--7-5 { grid-template-columns: 7fr 5fr; }
+  .masthead-inner { flex-wrap: nowrap; }
+  .nav-burger,
+  .nav-checkbox { display: none; }
+  .mainnav { width: auto; order: 0; }
+  .nav-checkbox:checked ~ .mainnav .nav-menu,
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+    gap: 0.3rem;
+  }
+  .nav-link { font-size: 1rem; padding: 0.55rem 0.85rem; }
+}
