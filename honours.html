@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Honours — FC Barcelona</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- same header and nav on each page, the menu is css only -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-crest" src="images/crest.svg" alt="FC Barcelona crest" width="42" height="51">
+        <span class="brand-text">
+          <span class="brand-name">FC Barcelona</span>
+          <span class="brand-motto">Més que un club</span>
+        </span>
+      </a>
+
+      <input class="nav-checkbox" type="checkbox" id="nav-toggle" aria-label="Toggle main menu">
+      <label class="nav-burger" for="nav-toggle">
+        <span class="nav-burger-box" aria-hidden="true"></span>
+        <span>Menu</span>
+      </label>
+
+      <nav class="mainnav" aria-label="Primary">
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="history.html">History</a></li>
+          <li><a class="nav-link" href="honours.html">Honours</a></li>
+          <li><a class="nav-link" href="media.html">Media</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="stripe-bar" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page header -->
+    <section class="section section--ink">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">The trophy room</p>
+        <h1 class="section-title">Honours</h1>
+        <p class="lead">One of the most decorated clubs in world football. Figures below are correct as of the end of the 2025–26 season.</p>
+      </div>
+    </section>
+
+    <!-- major honours table, uses caption and scope so screen readers can read it out properly -->
+    <section class="section">
+      <div class="container">
+        <div class="split split--4-8 split--start">
+          <div>
+            <p class="eyebrow">Silverware</p>
+            <h2 class="section-title">Major honours</h2>
+            <p>A snapshot of the club's principal domestic and international competitions. Barça holds the record for wins in several of them.</p>
+            <img src="images/trophy.svg" alt="Gold trophy representing FC Barcelona's honours" width="96" height="96">
+          </div>
+          <div>
+            <div class="table-card">
+              <div class="table-scroll">
+                <table class="data">
+                  <caption>FC Barcelona — major honours (senior men's team)</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Competition</th>
+                      <th scope="col" class="num">Titles</th>
+                      <th scope="col">Highlights</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">La Liga</th><td class="num">29</td><td>Inaugural champions in 1929</td></tr>
+                    <tr><th scope="row">Copa del Rey</th><td class="num">32</td><td>A record number of wins</td></tr>
+                    <tr><th scope="row">Supercopa de España</th><td class="num">16</td><td>A record number of wins</td></tr>
+                    <tr><th scope="row">UEFA Champions League</th><td class="num">5</td><td>1992, 2006, 2009, 2011, 2015</td></tr>
+                    <tr><th scope="row">UEFA Cup Winners' Cup</th><td class="num">4</td><td>1979, 1982, 1989, 1997 (now defunct)</td></tr>
+                    <tr><th scope="row">UEFA Super Cup</th><td class="num">5</td><td>Won alongside European titles</td></tr>
+                    <tr><th scope="row">FIFA Club World Cup</th><td class="num">3</td><td>2009, 2011, 2015</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- this table is wide so on phones it scrolls sideways inside the card instead of breaking the page -->
+    <section class="section section--mist">
+      <div class="container">
+        <p class="eyebrow">On the biggest stage</p>
+        <h2 class="section-title">European Cup &amp; Champions League finals</h2>
+        <p class="lead">Barça have contested eight finals in Europe's premier competition, winning five.</p>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="data">
+              <caption>Every European Cup / UEFA Champions League final played by FC Barcelona</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Season</th>
+                  <th scope="col">Result</th>
+                  <th scope="col">Opponent</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col" class="num">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1960–61</th><td class="loss">Runner-up</td><td>Benfica</td><td>Bern</td><td class="num">2–3</td></tr>
+                <tr><th scope="row">1985–86</th><td class="loss">Runner-up</td><td>Steaua București</td><td>Seville</td><td class="num">0–0 *</td></tr>
+                <tr><th scope="row">1991–92</th><td class="win">Winners</td><td>Sampdoria</td><td>London (Wembley)</td><td class="num">1–0</td></tr>
+                <tr><th scope="row">1993–94</th><td class="loss">Runner-up</td><td>AC Milan</td><td>Athens</td><td class="num">0–4</td></tr>
+                <tr><th scope="row">2005–06</th><td class="win">Winners</td><td>Arsenal</td><td>Paris</td><td class="num">2–1</td></tr>
+                <tr><th scope="row">2008–09</th><td class="win">Winners</td><td>Manchester United</td><td>Rome</td><td class="num">2–0</td></tr>
+                <tr><th scope="row">2010–11</th><td class="win">Winners</td><td>Manchester United</td><td>London (Wembley)</td><td class="num">3–1</td></tr>
+                <tr><th scope="row">2014–15</th><td class="win">Winners</td><td>Juventus</td><td>Berlin</td><td class="num">3–1</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4">Champions of Europe</td><td class="num">5 titles</td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <p class="media-note">* The 1986 final finished 0–0 after extra time; Steaua București won 2–0 on penalties.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripe-bar" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-brand">
+            <img src="images/crest.svg" alt="" width="40" height="49">
+            <span>FC Barcelona</span>
+          </div>
+          <p>A student tribute to the history, honours and spirit of the Blaugrana. Not affiliated with FC Barcelona.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="honours.html">Honours</a></li>
+            <li><a href="media.html">Media</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: <a href="mailto:sphillips@clancy.ie?subject=Blaugrana%20Hub%20enquiry">sphillips@clancy.ie</a></li>
+            <li>Official site: <a href="https://www.fcbarcelona.com" target="_blank" rel="noopener noreferrer">fcbarcelona.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-disclaimer">This is an unofficial fan site. It is not affiliated with, endorsed by, or associated with Futbol Club Barcelona. Club names, crests and trademarks are the property of their respective owners.</p>
+      <span>© 2026 Built by Sean Phillips.</span>
+      <span>Built with HTML &amp; CSS.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

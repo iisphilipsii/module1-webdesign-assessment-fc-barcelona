@@ -485,6 +485,65 @@ ul, ol { margin: 0 0 1rem; }
   padding-left: 0.9rem;
 }
 
+/* Tables (honours page) */
+.table-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }  /* the table scrolls inside the card, not the page */
+
+table.data {
+  width: 100%;
+  min-width: 560px;               /* forces the sideways scroll on small screens */
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+table.data caption {
+  caption-side: top;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  font-family: var(--ff-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+table.data thead th {
+  background: var(--blau);
+  color: var(--white);
+  font-family: var(--ff-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+}
+table.data tbody th,
+table.data tbody td {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+table.data tbody th { font-weight: 600; }
+table.data tbody tr:nth-child(odd) { background: var(--mist); }
+table.data tbody tr:hover { background: rgba(0, 77, 152, 0.08); }
+table.data .num { text-align: right; font-weight: 600; }
+table.data .win { color: var(--blau); font-weight: 700; }
+table.data .loss { color: var(--grana); font-weight: 700; }
+table.data tfoot td {
+  padding: 0.8rem 1rem;
+  border-top: 2px solid var(--blau);
+  font-family: var(--ff-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
 /* Responsive breakpoints (mobile first) */
 
 /* 600px and up: cards go two across */
@@ -497,13 +556,15 @@ ul, ol { margin: 0 0 1rem; }
 @media (min-width: 768px) {
   .hero-inner { grid-template-columns: 1.05fr 0.95fr; align-items: center; }
   .stat-row { grid-template-columns: repeat(4, 1fr); }
+  table.data { min-width: 0; }         /* enough room now, no scroll needed */
 }
 
 /* 992px and up: full nav bar across the top; burger hidden on desktop wide view; burger menu shows when window is narrowed*/
 @media (min-width: 992px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
   .split--7-5 { grid-template-columns: 7fr 5fr; }
-    .split--8-4 { grid-template-columns: 8fr 4fr; }
+  .split--8-4 { grid-template-columns: 8fr 4fr; }
+  .split--4-8 { grid-template-columns: 4fr 8fr; }
   .masthead-inner { flex-wrap: nowrap; }
   .nav-burger,
   .nav-checkbox { display: none; }
