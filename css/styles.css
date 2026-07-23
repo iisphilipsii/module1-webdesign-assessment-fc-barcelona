@@ -583,6 +583,19 @@ table.data tfoot td {
   font-weight: 700;
 }
 
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .rise { opacity: 1; transform: none; }
+}
+
 /* Responsive breakpoints (mobile first) */
 
 /* 600px and up: cards go two across */
