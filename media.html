@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media — FC Barcelona</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- same header and nav on each page, the menu is css only -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-crest" src="images/crest.svg" alt="FC Barcelona crest" width="42" height="51">
+        <span class="brand-text">
+          <span class="brand-name">FC Barcelona</span>
+          <span class="brand-motto">Més que un club</span>
+        </span>
+      </a>
+
+      <input class="nav-checkbox" type="checkbox" id="nav-toggle" aria-label="Toggle main menu">
+      <label class="nav-burger" for="nav-toggle">
+        <span class="nav-burger-box" aria-hidden="true"></span>
+        <span>Menu</span>
+      </label>
+
+      <nav class="mainnav" aria-label="Primary">
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="history.html">History</a></li>
+          <li><a class="nav-link" href="honours.html">Honours</a></li>
+          <li><a class="nav-link" href="media.html">Media</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="stripe-bar" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page header -->
+    <section class="section section--ink">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">Watch</p>
+        <h1 class="section-title">Media</h1>
+        <p class="lead">FC Barcelona was the first sports club in the world to pass 25 million YouTube subscribers. Here's a highlight from the club's official channel.</p>
+      </div>
+    </section>
+
+    <!-- video (bonus feature) - used the youtube-nocookie version for privacy,
+         lazy loading so it doesn't slow the page down, and a title so
+         screen readers know what it is -->
+    <section class="section">
+      <div class="container">
+        <div class="split split--8-4 split--start">
+          <div>
+            <p class="eyebrow">From the official channel</p>
+            <h2 class="section-title">Barça TV highlights</h2>
+            <div class="video-frame ratio-fallback">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/p_kbsXkQBzo"
+                title="FC Barcelona — “Lamine Yamal: Then vs Now” (official video)"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="media-note">The player above is an official FC Barcelona video, embedded from the club's YouTube channel. It scales to a perfect 16:9 at any screen width.</p>
+          </div>
+
+          <div>
+            <article class="feature">
+              <div class="feature-icon"><img src="images/crest.svg" alt=""></div>
+              <h3>More from Barça</h3>
+              <p>Follow the club's own platforms for full match highlights, interviews and behind-the-scenes features.</p>
+              <ul>
+                <li><a href="https://www.youtube.com/channel/UC14UlmYlSNiQCBe9Eookf_A" target="_blank" rel="noopener noreferrer">Official YouTube channel</a></li>
+                <li><a href="https://www.fcbarcelona.com" target="_blank" rel="noopener noreferrer">fcbarcelona.com</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripe-bar" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-brand">
+            <img src="images/crest.svg" alt="" width="40" height="49">
+            <span>FC Barcelona</span>
+          </div>
+          <p>A student tribute to the history, honours and spirit of the Blaugrana. Not affiliated with FC Barcelona.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="honours.html">Honours</a></li>
+            <li><a href="media.html">Media</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: <a href="mailto:sphillips@clancy.ie?subject=Blaugrana%20Hub%20enquiry">sphillips@clancy.ie</a></li>
+            <li>Official site: <a href="https://www.fcbarcelona.com" target="_blank" rel="noopener noreferrer">fcbarcelona.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p class="footer-disclaimer">This is an unofficial fan site. It is not affiliated with, endorsed by, or associated with Futbol Club Barcelona. Club names, crests and trademarks are the property of their respective owners.</p>
+      <span>© 2026 Built by Sean Phillips.</span>
+      <span>Built with HTML &amp; CSS.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
