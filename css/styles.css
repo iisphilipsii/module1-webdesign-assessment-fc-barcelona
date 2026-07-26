@@ -371,6 +371,7 @@ ul, ol { margin: 0 0 1rem; }
 @keyframes rise { to { opacity: 1; transform: none; } }
 
 .split { display: grid; gap: clamp(1.5rem, 4vw, 2rem); }
+.split > * { min-width: 0; }    /* stops the table card blowing out the grid column so it can scroll inside instead */
 .split--center { align-items: center; }
 .split--start { align-items: start; }
 .cards { display: grid; gap: clamp(1.25rem, 3vw, 1.75rem); }
