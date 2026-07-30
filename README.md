@@ -60,7 +60,8 @@ Bootstrap grid used for the home page feature cards.
 ├── honours.html        # Honours
 ├── media.html          # Media
 ├── css/
-│   └── styles.css      # Single stylesheet for the whole site
+│   ├── bootstrap-grid.min.css    # Bootstrap 5.3.3, grid classes only, no JavaScript
+│   └── styles.css                # My own stylesheet for the whole site
 └── images/
     ├── crest.svg
     ├── hero.svg
