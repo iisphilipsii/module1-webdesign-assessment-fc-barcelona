@@ -22,6 +22,9 @@
 
   <link rel="icon" href="images/crest.svg" type="image/svg+xml">
 
+  <!-- Bootstrap grid (layout only, no JavaScript) -->
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
   <!-- My Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -95,28 +98,29 @@
       </div>
     </section>
 
-     <!-- Feature cards (CSS grid) -->
+     <!-- Feature cards (Bootstrap grid) -->
     <section class="section section--mist">
       <div class="container">
         <p class="eyebrow">At a glance</p>
         <h2 class="section-title">What makes Barça, Barça</h2>
         <!-- the card icons are just decoration so I left the alt text empty -->
-        <div class="cards">
-          <div>
+        <!-- Bootstrap grid: one column on a phone, two from sm, three from lg -->
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <article class="feature">
               <div class="feature-icon"><img src="images/crest.svg" alt=""></div>
               <h3>Owned by members</h3>
               <p>More than 140,000 <em>socis</em> elect the club president and hold the club to account — a rare model in modern elite football.</p>
             </article>
           </div>
-          <div>
+          <div class="col-12 col-sm-6 col-lg-4">
             <article class="feature">
               <div class="feature-icon"><img src="images/stadium.svg" alt=""></div>
               <h3>Spotify Camp Nou</h3>
               <p>The club's landmark home has long been one of Europe's largest stadiums and is being rebuilt as part of the Espai Barça project.</p>
             </article>
           </div>
-          <div>
+          <div class="col-12 col-sm-6 col-lg-4">
             <article class="feature">
               <div class="feature-icon"><img src="images/trophy.svg" alt=""></div>
               <h3>La Masia academy</h3>

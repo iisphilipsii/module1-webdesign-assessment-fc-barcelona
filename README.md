@@ -3,7 +3,8 @@
 A four-page FC Barcelona fan site built with HTML and CSS for the
 UCD Professional Academy Module 1 web design assessment.
 
-No Javascript, no frameworks.
+No JavaScript. The layout is CSS Grid and Flexbox, with the
+Bootstrap grid used for the home page feature cards.
 
 ## Pages
 
@@ -16,13 +17,19 @@ No Javascript, no frameworks.
 
 ## Features
 
-- **Responsive layout** — mobile-first, with breakpoints at 600px (cards two across,
-  three-column footer), 768px (two-column hero, four-column stats) and 992px
-  (full nav bar, hamburger hidden).
+- **Responsive layout** — mobile-first. My own breakpoints are 600px (three-column
+  footer), 768px (two-column hero, four-column stats) and 992px (full nav bar,
+  hamburger hidden). The feature cards follow Bootstrap's tiers instead, so they
+  go two across at 576px rather than 600px.
 - **CSS-only burger menu** — a hidden checkbox drives the mobile navigation, so it
   works with JavaScript disabled.
-- **CSS Grid and Flexbox** — grid for the card, stat and footer rows, flexbox for the
+- **CSS Grid and Flexbox** — grid for the stat and footer rows, flexbox for the
   header and inline layouts.
+- **Bootstrap grid** — `css/bootstrap-grid.min.css` (Bootstrap 5.3.3, grid only,
+  6KB gzipped) lays out the home page feature cards as `col-12 col-sm-6 col-lg-4`.
+  It is loaded before `styles.css` so my own rules take precedence, and it brings
+  no JavaScript with it. Note that `lg` is 992px, matching the query it replaced,
+  but `sm` is 576px, so the two-column step now happens 24px earlier than before.
 - **Club colour theme** — blaugrana palette (`--blau #004D98`, `--grana #A50044`,
   gold accent) set as custom properties in `:root`.
 - **Semantic HTML** — `header` / `nav` / `main` / `section` / `article` / `footer`,

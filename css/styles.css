@@ -1,8 +1,11 @@
 /* Stylesheet for the website
-   Mobile first, no JavaScript and no CSS framework. 
-   The layout is done with CSS Grid and Flexbox.
+   Mobile first, no JavaScript.
+   The layout is done with CSS Grid and Flexbox, plus the Bootstrap grid
+   (css/bootstrap-grid.min.css, grid classes only) for the home page cards.
    Colours are the club's blue and garnet (blaugrana) with a gold accent.
-   Headings use Barlow Condensed and text uses Barlow. */
+   Headings ask for Barlow Condensed and text for Barlow, but no font is
+   downloaded, so unless the visitor has Barlow installed the stacks below
+   fall back to Arial Narrow for headings and the system font for text. */
 
 /* Variables */
 :root {
@@ -374,7 +377,7 @@ ul, ol { margin: 0 0 1rem; }
 .split > * { min-width: 0; }    /* stops the table card blowing out the grid column so it can scroll inside instead */
 .split--center { align-items: center; }
 .split--start { align-items: start; }
-.cards { display: grid; gap: clamp(1.25rem, 3vw, 1.75rem); }
+/* the feature cards are laid out with the Bootstrap grid (.row / .col-*), so no rule is needed here */
 
 .feature {
   background: var(--white);
@@ -599,9 +602,8 @@ table.data tfoot td {
 
 /* Responsive breakpoints (mobile first) */
 
-/* 600px and up: cards go two across */
+/* 600px and up: footer splits into three (the cards go two across at Bootstrap's sm) */
 @media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
 }
 
@@ -614,7 +616,6 @@ table.data tfoot td {
 
 /* 992px and up: full nav bar across the top; burger hidden on desktop wide view; burger menu shows when window is narrowed*/
 @media (min-width: 992px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
   .split--7-5 { grid-template-columns: 7fr 5fr; }
   .split--8-4 { grid-template-columns: 8fr 4fr; }
   .split--4-8 { grid-template-columns: 4fr 8fr; }
